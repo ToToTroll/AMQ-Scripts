@@ -1,1 +1,1 @@
-# AMQ-Even-Better-Song-Artist-Mode
+# AMQ-Scripts
