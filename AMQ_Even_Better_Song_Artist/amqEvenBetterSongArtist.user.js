@@ -8,8 +8,8 @@
 // @grant        none
 // @require      https://github.com/amq-script-project/AMQ-Scripts/raw/master/gameplay/simpleLogger.js
 // @require      https://raw.githubusercontent.com/TheJoseph98/AMQ-Scripts/master/common/amqScriptInfo.js
-// @downloadURL  https://raw.githubusercontent.com/ToToTroll/AMQ-Scripts/master/AMQ_Even_Better_Song_Artist/amqEvenBetterSongArtist.js
-// @updateURL    https://raw.githubusercontent.com/ToToTroll/AMQ-Scripts/master/AMQ_Even_Better_Song_Artist/amqEvenBetterSongArtist.js
+// @downloadURL  https://raw.githubusercontent.com/ToToTroll/AMQ-Scripts/master/AMQ_Even_Better_Song_Artist/amqEvenBetterSongArtist.user.js
+// @updateURL    https://raw.githubusercontent.com/ToToTroll/AMQ-Scripts/master/AMQ_Even_Better_Song_Artist/amqEvenBetterSongArtist.user.js
 // ==/UserScript==
 
 // I'm just attempting to fix some bugs mainly involving the lists of titles and artists and how answers are checked.
@@ -34415,6 +34415,9 @@ class SongArtistMode {
                 else {
                     possibleAnswers = value.split(new RegExp(/feat\.|featuring|feat|&|×|ft.|,/, "gi"));
                 }
+
+                possibleAnswers.push(value)
+
                 for (let i = 0; i < possibleAnswers.length; i++) {
                     possibleAnswers[i] = possibleAnswers[i].trim().toLowerCase()
                 }
@@ -34466,40 +34469,18 @@ class SongArtistMode {
                 answerMap.set(sender, '')
             }
 
-            if (scoringMode === true) {
-                let possibleAnswers = [value]
-                for (let i = 0; i < possibleAnswers.length; i++) {
-                    possibleAnswers[i] = possibleAnswers[i].trim().toLowerCase()
-                }
-                console.log(possibleAnswers)
-                if (possibleAnswers.includes(answerMap.get(sender).toLowerCase())) {
-                    for (let i = 0; i < playerAmount; i++) {
-                        if (quiz.players[i]._name === sender) {
-                            playerData[i].rig++;
-                        }
+            if (this.#isCorrect(value, sender, answer)) {
+                for (let i = 0; i < playerAmount; i++) {
+                    if (quiz.players[i]._name === sender) {
+                        playerData[i].rig++;
                     }
-                    writeRigToScoreboard()
-                    const displayAnswer = answerMap.get(sender) ?? value
-                    revealFunction(sender, displayAnswer, true)
-                } else {
-                    const displayAnswer = answerMap.get(sender) ?? "WRONG"
-                    revealFunction(sender, displayAnswer, false)
                 }
-
+                writeRigToScoreboard()
+                const displayAnswer = answerMap.get(sender) ?? value
+                revealFunction(sender, displayAnswer, true)
             } else {
-                if (this.#isCorrect(value, sender, answer)) {
-                    for (let i = 0; i < playerAmount; i++) {
-                        if (quiz.players[i]._name === sender) {
-                            playerData[i].rig++;
-                        }
-                    }
-                    writeRigToScoreboard()
-                    const displayAnswer = answerMap.get(sender) ?? value
-                    revealFunction(sender, displayAnswer, true)
-                } else {
-                    const displayAnswer = answerMap.get(sender) ?? "WRONG"
-                    revealFunction(sender, displayAnswer, false)
-                }
+                const displayAnswer = answerMap.get(sender) ?? "WRONG"
+                revealFunction(sender, displayAnswer, false)
             }
         }
         )
