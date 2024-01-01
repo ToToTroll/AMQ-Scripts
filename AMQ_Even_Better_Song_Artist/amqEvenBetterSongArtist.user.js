@@ -34676,7 +34676,7 @@ function setup() {
         author: "ToToTroll (Original Author: 4Lajf (forked from Zolhungaj))",
         version: "1.0",
         link: "https://raw.githubusercontent.com/ToToTroll/AMQ-Scripts/master/AMQ_Even_Better_Song_Artist/amqEvenBetterSongArtist.user.js",
-        description: "Makes you able to play song/artist with other people who have this script installed. Includes dropdown (with auto-update) and scoretable."
+        description: "Makes you able to play song/artist with other people who have this script installed. Includes dropdown and scoretable."
     });
 
     // CSS stuff
