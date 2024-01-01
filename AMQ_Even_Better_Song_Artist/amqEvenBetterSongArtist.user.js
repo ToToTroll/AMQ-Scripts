@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AMQ Even Better Song Artist Mode
 // @namespace    https://github.com/ToToTroll
-// @version      0.1
+// @version      1.0
 // @description  Makes you able to play song/artist with other people who have this script installed. Includes dropdown and scoretable.
 // @author       ToToTroll (Original Author: 4Lajf (forked from Zolhungaj))
 // @match        https://animemusicquiz.com/*
@@ -34670,14 +34670,15 @@ if (enableBinary === true) {
     window.songArtist = new SongArtistMode()
 }
 
-
-AMQ_addScriptData({
-    name: " AMQ Even Better Song Artist Mode",
-    author: "ToToTroll (Original Author: 4Lajf (forked from Zolhungaj))",
-    description: `Makes you able to play song/artist with other people who have this script installed. Includes dropdown (with auto-update) and scoretable.`
-});
-
 function setup() {
+    AMQ_addScriptData({
+        name: "AMQ Even Better Song Artist Mode",
+        author: "ToToTroll (Original Author: 4Lajf (forked from Zolhungaj))",
+        version: "1.0",
+        link: "https://raw.githubusercontent.com/ToToTroll/AMQ-Scripts/master/AMQ_Even_Better_Song_Artist/amqEvenBetterSongArtist.user.js",
+        description: "Makes you able to play song/artist with other people who have this script installed. Includes dropdown (with auto-update) and scoretable."
+    });
+
     // CSS stuff
     AMQ_addStyle(`
             .qpsPlayerRig {
