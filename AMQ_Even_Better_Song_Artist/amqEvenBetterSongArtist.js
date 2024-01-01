@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         AMQ Better Song Artist Mode
+// @name         AMQ Even Better Song Artist Mode
 // @namespace    http://tampermonkey.net/
 // @version      1.6.7
-// @description  Makes you able to play song/artist with other people who have this script installed. Includes dropdown (with auto-update) and scoretable.
+// @description  Makes you able to play song/artist with other people who have this script installed. Includes dropdown and scoretable.
 // @author       ToToTroll (Original Author: 4Lajf (forked from Zolhungaj))
 // @match        https://animemusicquiz.com/*
 // @grant        none
@@ -12,8 +12,8 @@
 // @require      https://raw.githubusercontent.com/TheJoseph98/AMQ-Scripts/master/common/amqScriptInfo.js
 // @copyright    MIT license
 // ==/UserScript==
-// It only shows score on scoreboard during guess phase and IDK how to bypass it buy anyway, it works.
-// I'm sure you can guess which parts of code were written by me. I don't know js very much so it's dirty garbage but hey, again, it works! (I hope)
+
+// I'm just attempting to fix some bugs mainly involving the lists of titles and artists and how answers are checked.
 
 /* Limits how many songs can be rendered when you type a keyword. Larger number means more lag and requires more computing power. */
 let dropdownListLimit = 50
