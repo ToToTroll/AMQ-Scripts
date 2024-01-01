@@ -34691,8 +34691,8 @@ if (enableBinary === true) {
 
 
 AMQ_addScriptData({
-    name: " AMQ Better Song Artist Mode",
-    author: "4Lajf (forked from Zolhungaj)",
+    name: " AMQ Even Better Song Artist Mode",
+    author: "ToToTroll (Original Author: 4Lajf (forked from Zolhungaj))",
     description: `Makes you able to play song/artist with other people who have this script installed. Includes dropdown (with auto-update) and scoretable.`
 });
 
