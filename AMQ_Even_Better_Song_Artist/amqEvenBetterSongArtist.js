@@ -1,16 +1,15 @@
 // ==UserScript==
 // @name         AMQ Even Better Song Artist Mode
-// @namespace    http://tampermonkey.net/
-// @version      1.6.7
+// @namespace    https://github.com/ToToTroll
+// @version      0.1
 // @description  Makes you able to play song/artist with other people who have this script installed. Includes dropdown and scoretable.
 // @author       ToToTroll (Original Author: 4Lajf (forked from Zolhungaj))
 // @match        https://animemusicquiz.com/*
 // @grant        none
-// @downloadURL  https://raw.githubusercontent.com/ToToTroll/AMQ-Scripts/master/AMQ_Even_Better_Song_Artist/amqEvenBetterSongArtist.js
-// @updateURL    https://raw.githubusercontent.com/ToToTroll/AMQ-Scripts/master/AMQ_Even_Better_Song_Artist/amqEvenBetterSongArtist.js
 // @require      https://github.com/amq-script-project/AMQ-Scripts/raw/master/gameplay/simpleLogger.js
 // @require      https://raw.githubusercontent.com/TheJoseph98/AMQ-Scripts/master/common/amqScriptInfo.js
-// @copyright    MIT license
+// @downloadURL  https://raw.githubusercontent.com/ToToTroll/AMQ-Scripts/master/AMQ_Even_Better_Song_Artist/amqEvenBetterSongArtist.js
+// @updateURL    https://raw.githubusercontent.com/ToToTroll/AMQ-Scripts/master/AMQ_Even_Better_Song_Artist/amqEvenBetterSongArtist.js
 // ==/UserScript==
 
 // I'm just attempting to fix some bugs mainly involving the lists of titles and artists and how answers are checked.
