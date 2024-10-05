@@ -6,8 +6,8 @@
 // @author       ToToTroll
 // @match        https://*.animemusicquiz.com/*
 // @grant        none
-// @downloadURL  https://raw.githubusercontent.com/ToToTroll/AMQ-Scripts/master/amqGuessingPhase.user.js
-// @updateURL    https://raw.githubusercontent.com/ToToTroll/AMQ-Scripts/master/amqGuessingPhase.user.js
+// @downloadURL  https://github.com/ToToTroll/AMQ-Scripts/raw/refs/heads/master/amqGuessingPhase.user.js
+// @updateURL    https://github.com/ToToTroll/AMQ-Scripts/raw/refs/heads/master/amqGuessingPhase.user.js
 // @require      https://raw.githubusercontent.com/TheJoseph98/AMQ-Scripts/master/common/amqScriptInfo.js
 // ==/UserScript==
 if (document.getElementById('startPage')) return;
