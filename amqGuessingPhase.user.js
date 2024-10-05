@@ -37,6 +37,8 @@ function setup() {
     AMQ_addScriptData({
         name: "AMQ Guessing Phase",
         author: "ToToTroll",
+        version: "1.0",
+        link: "https://github.com/ToToTroll/AMQ-Scripts/raw/refs/heads/master/amqGuessingPhase.user.js",
         description: `Sends messages whenever guessing phase starts and ends. Useful for moderating ranked chat.`
     });
 }
