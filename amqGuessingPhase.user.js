@@ -2,7 +2,7 @@
 // @name         AMQ Guessing Phase
 // @namespace    http://tampermonkey.net/
 // @version      1.1
-// @description  Sends messages whenever guessing phase starts and ends. Useful for moderating ranked chat. Ctrl+Q to toggle.
+// @description  Sends messages whenever guessing phase starts and ends. Useful for moderating ranked chat. Alt+Q to toggle.
 // @author       ToToTroll
 // @match        https://*.animemusicquiz.com/*
 // @grant        none
@@ -26,7 +26,7 @@ let loadInterval = setInterval(() => {
 
 //Toggle on/off
 document.addEventListener('keydown', function(event) {
-    if (event.ctrlKey && event.key === 'q') {
+    if (event.altKey && event.key === 'q') {
         event.preventDefault();
         enabled = !enabled;
         if(enabled) gameChat.systemMessage(`Guessing Phase messages enabled!`);
@@ -57,6 +57,6 @@ function setup() {
         author: "ToToTroll",
         version: "1.1",
         link: "https://github.com/ToToTroll/AMQ-Scripts/raw/refs/heads/master/amqGuessingPhase.user.js",
-        description: `Sends messages whenever guessing phase starts and ends. Useful for moderating ranked chat. Ctrl+Q to toggle.`
+        description: `Sends messages whenever guessing phase starts and ends. Useful for moderating ranked chat. Alt+Q to toggle.`
     });
 }
